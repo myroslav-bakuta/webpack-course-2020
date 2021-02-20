@@ -27,7 +27,8 @@ const optimization = () => {
 const fileName = (ext) => (isDev ? `[name].${ext}` : `[name].[hash].${ext}`)
 
 const cssLoaders = (extra) => {
-    const loaders = [
+    let loaders
+    loaders = [
         {
             loader: MiniCssExtractPlugin.loader,
             options: {
@@ -110,6 +111,7 @@ module.exports = {
         contentBase: './dist',
         open: true,
         hot: true,
+        // inline: true,
     },
     devtool: isDev ? 'source-map' : 'eval-source-map',
     plugins: plugins(),

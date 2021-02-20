@@ -1,5 +1,5 @@
 import * as $ from 'jquery'
-import Post from '@models/Post'
+import Post from '@/models/Post'
 import '@/babel.js'
 
 import React from 'react'
@@ -11,8 +11,8 @@ import {render} from 'react-dom'
 
 import WebpackLogo from './assets/webpack-logo.png'
 
-import './styles/styles.css'
-import './styles/scss.scss'
+import '@/styles/styles.css'
+import '@/styles/scss.scss'
 
 const post = new Post('Webpack Post Title', WebpackLogo)
 
@@ -23,7 +23,9 @@ const App = () => (
 	<div className="container">
 		<h1>Webpack Course</h1>
 		<hr/>
-		<div className="logo" />
+		<div className="logo">
+			{/*<img src="assets/webpack-logo.png" alt="logo"/>*/}
+		</div>
 		<hr/>
 		<pre/>
 		<hr/>
